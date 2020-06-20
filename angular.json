@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "api-webkit-disney": {
+    "api-app-disney": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/api-webkit-disney",
+            "outputPath": "dist/api-app-disney",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "api-webkit-disney:build"
+            "browserTarget": "api-app-disney:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "api-webkit-disney:build:production"
+              "browserTarget": "api-app-disney:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "api-webkit-disney:build"
+            "browserTarget": "api-app-disney:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "api-webkit-disney:serve"
+            "devServerTarget": "api-app-disney:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "api-webkit-disney:serve:production"
+              "devServerTarget": "api-app-disney:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "api-webkit-disney"
+  "defaultProject": "api-app-disney"
 }
