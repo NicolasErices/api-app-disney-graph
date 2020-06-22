@@ -1,0 +1,145 @@
+// Host component main
+:host{
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #1a0f46;
+}
+
+// container header
+.container-header{
+    float: left;
+    width: 100%;
+    background-color: #1a0f46;
+    .container-header{
+        float: left;
+        width: 50%;
+    }
+}
+
+// container hero
+.container-hero{
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #1a0f46;
+    padding-bottom: 50px;
+    .title{
+        font-size: 5rem;
+        font-weight: bold;
+        color: #FFF;
+        padding-top: 100px;
+    }
+}
+
+// characters
+.container-character{
+    width: 100%;
+    .characters{
+        margin: 0 auto;
+        width: 60%;
+        li{
+            padding: 20px;
+            float: left;
+            display: block;
+            width: 33.333%;
+            .container-card-character{
+                float: left;
+                background-color: #241b55;
+                border-radius: 4px;
+                overflow: hidden;
+                height: 330px;
+                transition: 0.2s all ease-in-out;
+                &:hover{
+                    box-shadow: 3px 5px 202px #00ffbc;
+                }
+                .header-card{
+                    float: left;
+                    width: 100%;
+                    overflow: hidden;
+                    height: 190px;
+                    img{
+                        width: 100%;    
+                    }
+                }
+            }
+        }
+    }
+}
+.container-detail{
+    padding: 10px;
+    overflow: hidden;
+    .character-name{
+        color: #09d49e;
+        font-weight: bold;
+        float: left;
+        width: 100%;
+        font-size: 20px,
+    }
+    .character-description{
+        font-weight: normal;
+        color: #a7edd9;
+        width: 100%;
+        float: left;
+        margin: 10px 0px
+    }
+}
+.character-movie{
+    float: left;
+    width: 100%;
+    .character-movie-name{
+        float: left;
+        width: 100%;
+        color: #a7edd9;
+        font-weight: normal;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+// button home Get started
+.button-started{
+    padding: 20px;
+    background-color: #09d49e;
+    display: inline-block;
+    border-radius: 6px;
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 60px;
+    transition: 0.2s all ease;
+    &:hover{
+        background-color: #0adaa3;
+        box-shadow: 3px 5px 202px #00ffbc;
+    }
+}
+
+// footer
+footer{
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding: 20px;
+    background-color: #1a0f46;
+    .by-developer{
+        color: #a7edd9;
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .name-developer{
+        a{
+            color: #FFF;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: underline;
+            text-decoration-color: #a7edd9;
+        }
+    }
+    .year-developer{
+        color: #a7edd9;
+        font-weight: normalr;
+        font-size: 14px;
+    }
+}

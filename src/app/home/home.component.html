@@ -1,0 +1,51 @@
+<!-- header -->
+<header class="container-header">
+    <div class="container-header">
+        
+    </div>
+</header>
+<!-- end of header -->
+
+<!-- container hero -->
+<div class="container-hero">
+    <h1 class="title">The Api Disney Characters</h1>
+    <a routerLink="get-started" class="button-started">Get Started</a>
+</div>
+<!-- end of container hero -->
+
+<!-- some characters -->
+<div class="container-character">
+    <div class="characters">
+        <ul>
+            <li *ngFor="let charcter of characters">
+                <div class="container-card-character">
+                    <div class="header-card">
+                        <img src="{{charcter.image}}" alt="">
+                    </div>
+                    <div class="container-detail">
+                        <span class="character-name">{{charcter.name}}</span>
+                        <div class="character-movie" 
+                            *ngFor="let speciesCharacter of charcter.species">
+                            <span class="character-movie-name">
+                                Gender: {{speciesCharacter.gender}}
+                            </span>
+                            <span class="character-movie-name">
+                                Species: {{speciesCharacter.name}}
+                            </span>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end of some characters -->
+
+<!-- footer -->
+<footer>
+    <span class="by-developer">❮❯ by </span>
+    <span class="name-developer"> <a routerLink=""> Carlos Erices Méndez </a></span>
+    <span class="year-developer"> 2020</span>
+</footer>
+<!-- end of footer -->

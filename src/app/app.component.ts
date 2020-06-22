@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from 'apollo-angular';
+import { Apollo, QueryRef } from 'apollo-angular';
 import gql from 'graphql-tag';
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent {
   getCharacter: any;
   loading = true;
   error: any;
+  feed: any;
   constructor(private apollo: Apollo) {}
   ngOnInit() {
     this.apollo
@@ -23,15 +24,21 @@ export class AppComponent {
               name
               description
               image
-              movie{
+              movie {
                 name
+                year
+              }
+              species {
+                name
+                gender
               }
             }
           }
         `,
       })
       .valueChanges.subscribe((result: any) => {
-        this.getCharacter = result.data.getCharacter;
+        console.log(result);
+        this.getCharacter = result.data.getCharacter.slice(0, 6);
         this.loading = result.loading;
         this.error = result.error;
       });
